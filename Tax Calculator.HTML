@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TAX CALCULATOR</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>TAX CALCULATOR</h1>
+    <form action="index.php" method="post">
+      <label for="salary">Monthly Salary (PHP):</label>
+      <input type="text" id="salary" name="salary" required>
+
+      <label for="frequency">Salary Frequency:</label>
+      <select id="frequency" name="frequency" required>
+        <option value="monthly">Monthly</option>
+        <option value="bi-monthly">Bi-monthly</option>
+      </select>
+
+      <input type="submit" value="Calculate" name="submit">
+    </form>
+
+    <?php if (isset($_POST['salary']) && isset($_POST['frequency'])) { ?>
+      <div class="results">
+        <h2>Results</h2>
+        <p>Annual Salary: PHP <?php echo $annualSalary; ?></p>
+        <p>Estimated Annual Tax: PHP <?php echo $estimatedAnnualTax; ?></p>
+        <p>Estimated Monthly Tax: PHP <?php echo $estimatedMonthlyTax; ?></p>
+      </div>
+    <?php } ?>
+  </body>
+</html>
