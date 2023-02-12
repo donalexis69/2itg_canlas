@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>TAX CALCULATOR</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>TAX CALCULATOR</h1>
+      <form action="calculate.php" method="post">
+        <label for="salary">Monthly Salary (PHP):</label>
+        <input type="text" id="salary" name="salary">
+        <br><br>
+        <label for="nature">Nature of Salary:</label>
+        <select id="nature" name="nature">
+          <option value="monthly">Monthly</option>
+          <option value="bi-monthly">Bi-Monthly</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Calculate">
+      </form>
+    </div>
+  </body>
+</html>
